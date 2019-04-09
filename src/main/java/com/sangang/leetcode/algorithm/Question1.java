@@ -21,12 +21,12 @@ public class Question1 {
     public static void main(String[] args) {
         int[] nums = new int[]{12, 3, 4, 5};
         int target = 9;
-        int[] result = towsum(nums, target);
+        int[] result = towSum1(nums, target);
         System.out.println(Arrays.toString(result));
-        System.out.println(Arrays.toString(towSum1(nums, target)));
+        System.out.println(Arrays.toString(towSum2(nums, target)));
     }
 
-    private static int[] towsum(int[] nums, int target) {
+    private static int[] towSum1(int[] nums, int target) {
         int[] result = new int[2];
         if (nums == null) {
             return null;
@@ -44,7 +44,7 @@ public class Question1 {
         return null;
     }
 
-    private static int[] towSum1(int[] nums, int target) {
+    private static int[] towSum2(int[] nums, int target) {
         if (nums == null) {
             return null;
         }
