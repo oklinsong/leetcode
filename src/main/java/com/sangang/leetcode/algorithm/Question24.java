@@ -5,12 +5,12 @@ package com.sangang.leetcode.algorithm;
  * @date 2019/3/28 15:12
  **/
 
-public class SwapNode {
+public class Question24 {
     public static void main(String[] args) {
         ListNode head = ListNode.init();
         head = swapNode(head);
         while (head != null) {
-            System.out.println(head.getVal());
+            System.out.print(head.getVal()+" ");
             head = head.getNext();
         }
     }
