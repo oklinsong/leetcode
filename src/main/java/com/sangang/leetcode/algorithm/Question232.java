@@ -57,7 +57,7 @@ class MyQueue {
     }
 
     public boolean empty() {
-        if(in.empty()&&out.empty()){
+        if (in.empty() && out.empty()) {
             return true;
         }
         return false;
