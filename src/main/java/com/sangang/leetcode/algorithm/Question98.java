@@ -37,16 +37,16 @@ public class Question98 {
         TreeNode right = new TreeNode(9);
         root.left = left;
         root.right = right;
-        System.out.println(isValidBST(root, Integer.MAX_VALUE, Integer.MIN_VALUE));
+        System.out.println(isValidBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE));
     }
 
-    public static boolean isValidBST(TreeNode root, int max, int min) {
+    public static boolean isValidBST(TreeNode root, int min, int max) {
         if (root == null) {
             return true;
         }
         // 左子树比当前节点大 或者 右子树比当前节点小  就不是二叉搜索树
         if (root.val >= max || root.val <= min) return false;
-        return isValidBST(root.left, root.val, min) && isValidBST(root.right, max, root.val);
+        return isValidBST(root.left, min, root.val) && isValidBST(root.right, root.val, max);
     }
 
 }
